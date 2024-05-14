@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Uxf+uinywLZ7tDWujg+4i5BoXTq+2r32SYHxVBNyol8=",
+  "Source": "asp_net_ecommerce_api",
+  "BasePath": "_content/asp_net_ecommerce_api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
