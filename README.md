@@ -8,3 +8,5 @@ Watch by Swagger
 - dotnet watch run
 ## Start on Specified Swagger Port
 - http://localhost:{PORT}/swagger.
+## Add EF to project
+- dotnet add package Microsoft.EntityFrameworkCore.InMemory --version 8.0

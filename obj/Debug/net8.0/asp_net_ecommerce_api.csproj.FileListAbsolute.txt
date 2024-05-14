@@ -30,3 +30,7 @@ C:\Users\NoPassword\Desktop\C#\asp_net_ecommerce_api\bin\Debug\net8.0\Swashbuckl
 C:\Users\NoPassword\Desktop\C#\asp_net_ecommerce_api\obj\Debug\net8.0\asp_net_ecommerce_api.csproj.AssemblyReference.cache
 C:\Users\NoPassword\Desktop\C#\asp_net_ecommerce_api\obj\Debug\net8.0\asp_net_ecommerce_api.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\NoPassword\Desktop\C#\asp_net_ecommerce_api\obj\Debug\net8.0\asp_net_.1F20F1FD.Up2Date
+C:\Users\NoPassword\Desktop\C#\asp_net_ecommerce_api\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\NoPassword\Desktop\C#\asp_net_ecommerce_api\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\NoPassword\Desktop\C#\asp_net_ecommerce_api\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\NoPassword\Desktop\C#\asp_net_ecommerce_api\obj\Debug\net8.0\asp_net_ecommerce_api.sourcelink.json
