@@ -1,13 +1,34 @@
+using asp_net_ecommerce_api.Data;
+using asp_net_ecommerce_api.Repository;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-// using asp_net_ecommerce_api.Models.Product;
 var builder = WebApplication.CreateBuilder(args);
-// builder.Services.AddEndpointsApiExplorer();
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen(c =>
 {
      c.SwaggerDoc("v1", new OpenApiInfo { Title = "Ecommerce API", Description = "Buy the products you love", Version = "v1" });
 });
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+{
+  
+   if (connectionString != null)
+    {
+        options.UseMySQL(connectionString);
+    }
+    else
+    {
+        Console.WriteLine("Error: Connection string is null.");
+    } 
+
+
+});
+// Add or register repositories
+builder.Services.AddScoped<ProductRepository>();
+
+
 var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
@@ -17,13 +38,5 @@ if (app.Environment.IsDevelopment())
       c.SwaggerEndpoint("/swagger/v1/swagger.json", "Ecommerce API V1");
    });
 }
-// app.MapGet("/", () => "Hello World!");
-// app.MapGet("/products/{id}", (int id) => ProductDB.GetProduct(id));
-// app.MapGet("/products", () => ProductDB.GetProducts());
-// app.MapPost("/products", (Product product) => ProductDB.CreateProduct(product));
-// app.MapPut("/products", (Product product) => ProductDB.UpdateProduct(product));
-// app.MapDelete("/products/{id}", (int id) => ProductDB.RemoveProduct(id));
-
-
 app.MapControllers();
 app.Run();

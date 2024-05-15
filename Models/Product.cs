@@ -1,31 +1,31 @@
-namespace asp_net_ecommerce_api.Models.Product;
-public class Product {    
+namespace asp_net_ecommerce_api.Models;
+public class Products {    
    public int Id {get; set;} 
    public string ? Name { get; set; }
  }
 
 
  public class ProductDB{
-    private static List<Product> _products = new List<Product>()
+    private static List<Products> _products = new List<Products>()
     {
-        new Product{
+        new Products{
             Id=1,Name ="Product One"
         },
-        new Product{
+        new Products{
             Id=2, Name ="Product Two"
         }
     };
-    public static List<Product> GetProducts() {
+    public static List<Products> GetProducts() {
         return _products;
     }
-    public static Product ? GetProduct(int Id){
+    public static Products ? GetProduct(int Id){
         return _products.SingleOrDefault(product => product.Id == Id);
     }
-    public static Product CreateProduct(Product product){
+    public static Products CreateProduct(Products product){
         _products.Add(product);
         return product;
     }
-    public static Product UpdateProduct(Product update){
+    public static Products UpdateProduct(Products update){
         _products = _products.Select(product=>{
            if(product.Id == update.Id){
                 product.Name = update.Name;
