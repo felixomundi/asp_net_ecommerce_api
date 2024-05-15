@@ -1,4 +1,4 @@
-using asp_net_ecommerce_api.Data;
+using asp_net_ecommerce_api.DataBase;
 using asp_net_ecommerce_api.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;

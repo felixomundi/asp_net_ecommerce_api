@@ -1,7 +1,7 @@
 using asp_net_ecommerce_api.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace asp_net_ecommerce_api.Data;
+namespace asp_net_ecommerce_api.DataBase;
 
 public class ApplicationDbContext : DbContext{
 public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)

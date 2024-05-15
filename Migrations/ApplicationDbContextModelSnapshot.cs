@@ -3,7 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using asp_net_ecommerce_api.Data;
+using asp_net_ecommerce_api.DataBase;
 
 #nullable disable
 
