@@ -10,9 +10,10 @@ namespace asp_net_ecommerce_api.Models
     {
         public int Id { get; set; }
         [Required]
-        public string ? Username { get; set; }
-        [Required]
-        [EmailAddress]       
+        public string ? Username { get; set; }       
+        [Required(ErrorMessage = "Email is required")]
+        [EmailAddress(ErrorMessage = "Invalid email address")]     
+        [RegularExpression(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", ErrorMessage = "Invalid email address")]        
         public string  ? Email {
             get; set;
         }
