@@ -4,15 +4,15 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using asp_net_ecommerce_api.DataBase;
+using asp_net_ecommerce_api.Configurations;
 
 #nullable disable
 
 namespace asp_net_ecommerce_api.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240515083850_init")]
-    partial class init
+    [Migration("20240613082051_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -53,6 +53,29 @@ namespace asp_net_ecommerce_api.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Shirts");
+                });
+
+            modelBuilder.Entity("asp_net_ecommerce_api.Models.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,4 +1,4 @@
-using asp_net_ecommerce_api.DataBase;
+using asp_net_ecommerce_api.Configurations;
 using asp_net_ecommerce_api.Models;
 namespace asp_net_ecommerce_api.Repository;
 public class ProductRepository

@@ -32,8 +32,20 @@ dotnet add package Pomelo.EntityFrameworkCore.MySql --version 8.0.0
 check project errors
 - dotnet build
 ## create migrations
-- dotnet ef migrations add init
+- dotnet ef migrations add InitialCreate
 ## migrate 
 - dotnet ef database update
 ## remove migrations 
 - dotnet ef migrations remove
+
+## add authentication to api
+dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer
+dotnet add package System.IdentityModel.Tokens.Jwt
+
+
+
+## drop existing database
+dotnet ef database drop --force 
+
+
+
